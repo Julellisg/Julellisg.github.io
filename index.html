@@ -1,1 +1,104 @@
-My name is Julian!
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Portfolio</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="script.js"></script>
+</head>
+
+<body>
+
+	<div class="topnav">
+		<a href="/#">Home</a>
+		<a href="/#about">About</a>
+		<a href="/#project">Projects</a>
+		<a href="/#contact">Contact</a>
+	</div>
+
+	<div class="main">
+		<!-- TODO:
+			Text styling
+			Some CSS typing animation for the title or sub-title 
+			Scroll down animation-->
+		<div class="self-card major-content">
+			<h1 id="self-title">Hi, I'm Julian Ellis Geronimo,</h1>
+			<h2 id="self-sub-title">an aspiring (student) developer! </h2>
+			<div id="self-links">
+				<a href="https://github.com/Julellisg">
+					<img src="https://github.com/fluidicon.png" alt="GitHub Logo">
+				</a>
+				<a href="https://www.linkedin.com/in/jellisg16/">
+					<img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn Logo">
+				</a>
+			</div>
+		</div>
+
+
+		<!-- TODO: 
+			Spacing of the "About Me" Title
+			Text styling
+			Image shadow  -->
+		<div class="about-me major-content" id="about">
+			<h1>About Me</h1>
+			<div class="about-me-desc">
+				<div class="text-block">
+					<h2>
+						Hi, I'm Julian.
+					</h2>
+					<p>
+						Currently I am a Computer Science student attending Brock University in Ontario, Canada. I am
+						interested in designing and programming software applications that offer a wide range of uses.
+					</p>
+					<p>
+						To date, I have utilized programming languages such as Java, Python, and C++ to devleop a
+						variety of applications, including mobile applications, software apps, as well as computer
+						graphics. As a developer, I am constantly striving to expand my skillset by learning new
+						programming languages, staying up to date with the latest software tools, and taking on
+						challenging projects that push the boundaries of my abilities.
+					</p>
+					<p>
+						You can expect me to work diligently and publish my future projects on my <a
+							href="https://github.com/Julellisg">GitHub page</a>.
+					</p>
+					<p>
+						In my leisure time, I engage in productive hobbies such as graphics design and video editing, as
+						well
+						as recreational hobbies including snowboarding, tennis, art, and video games.
+					</p>
+				</div>
+				<div class="image-block">
+					<img src="Selfie of Julian v2.jpg" alt="Picture of me" class="about-me-item">
+				</div>
+
+			</div>
+		</div>
+
+		<div class="project major-content" id="project">
+			<h1>My Projects</h1>
+			<div class="project-container">
+				<div id="repos-list"></div>
+			</div>
+		</div>
+
+		<div class="contact major-content" id="contact">
+			<h1>Contact Me</h1>
+			<div id="contact-info">
+				<p>
+					If you have any interest in contacting me, please feel free to do so by sending an email to
+					julianellisg@gmail.com.
+				</p>
+				<p>
+					I assure you that I will promptly respond to your message as soon as
+					possible.
+				</p>
+			</div>
+		</div>
+		<script src="github_cards.js"></script>
+	</div>
+
+</body>
+
+</html>

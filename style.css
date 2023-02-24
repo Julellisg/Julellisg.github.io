@@ -1,4 +1,6 @@
-html{scroll-behavior:smooth}
+html {
+  scroll-behavior: smooth
+}
 
 @font-face {
   font-family: 'Lexend';
@@ -62,12 +64,12 @@ h1, h2 {
 }
 
 .topnav a:hover {
-  color:rgb(255, 125, 125);
+  color: rgb(255, 125, 125);
   transition: color 0.3s ease;
 }
 
 .topnav a:not(:hover) {
-  color:white;
+  color: white;
   transition: color 0.3s ease;
 }
 
@@ -80,7 +82,7 @@ h1, h2 {
 }
 
 .major-content a {
-  color:rgb(255, 60, 60)
+  color: rgb(255, 60, 60)
 }
 
 /* Major content 1 */
@@ -175,7 +177,7 @@ a img {
   width: 25%;
   margin: 8px 16px 8px 16px;
   padding: 20px 20px 75px 20px;
-  
+
   background-color: rgba(0, 0, 0, 0.4);
   border: 1px solid rgba(255, 49, 49, 0.4);
   border-radius: 20px;
@@ -254,11 +256,11 @@ a img {
 }
 
 #highlight {
-  color:rgb(255, 125, 125);
+  color: rgb(255, 125, 125);
 }
 
 #important {
-  color:rgb(255, 60, 60)
+  color: rgb(255, 60, 60)
 }
 
 /* Animation */
@@ -270,24 +272,34 @@ a img {
   #self-title {
     font-size: 35px;
   }
+
   #self-sub-title {
     font-size: 30px;
   }
+
   #title {
     font-size: 30px;
   }
-  .repo-container h2 {
-    font-size: 14px;
+
+  .about-me-desc img {
+    max-width: 280px;
   }
-  #repos-list p {
+
+  .repo-container h2 {
     font-size: 13px;
   }
-  .repo-container a {
+
+  #repos-list p {
     font-size: 12px;
+  }
+
+  .repo-container a {
+    font-size: 11px;
   }
 }
 
 @media (max-width: 1000px) {
+
   /* Nav bar */
   .topnav .main {
     text-align: center;
@@ -302,12 +314,15 @@ a img {
     display: flex;
     flex-direction: column;
   }
+
   .about-me-desc p {
     font-size: 15px;
   }
+
   .about-me .text-block {
     order: 2;
   }
+
   .about-me {
     order: 3;
   }
@@ -317,9 +332,11 @@ a img {
     width: 50%;
     padding-bottom: 50px;
   }
+
   .repo-container h2 {
     font-size: 18px;
   }
+
   #repos-list p {
     font-size: 16px;
   }

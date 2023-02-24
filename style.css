@@ -102,6 +102,10 @@ h1, h2 {
   padding-top: 20px;
 }
 
+#self-links a {
+  text-decoration: none;
+}
+
 a img {
   max-width: 40px;
   margin: 8px;

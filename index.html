@@ -6,109 +6,111 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 	<script src="script.js"></script>
 </head>
 
 <body>
-
+	<!-- Navigation bar -->
 	<div class="topnav">
-		<a href="/#">Home</a>
-		<a href="/#about">About</a>
-		<a href="/#project">Projects</a>
-		<a href="/#contact">Contact</a>
+		<a href="#home">Home</a>
+		<a href="#about">About</a>
+		<a href="#project">Projects</a>
+		<a href="#contact">Contact</a>
 	</div>
 
 	<div class="main">
-		<!-- TODO:
-			Text styling
-			Some CSS typing animation for the title or sub-title 
-			Scroll down animation
-		-->
-		<div class="self-card major-content">
+		<!-- Self Card -->
+		<div class="self-card major-content"  id="home">
 			<h1 id="self-title">Hi, I'm Julian Ellis Geronimo,</h1>
-			<h2 id="self-sub-title">an aspiring (student) developer! </h2>
+			<h2 id="self-sub-title">an <span id="important">aspiring developer!</span></h2>
 			<div id="self-links">
-				<a href="https://github.com/Julellisg">
-					<img src="https://github.com/fluidicon.png" alt="GitHub Logo">
+				<a href="https://github.com/Julellisg"> <img src="https://github.com/fluidicon.png" alt="GitHub Logo">
 				</a>
-				<a href="https://www.linkedin.com/in/jellisg16/">
-					<img src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn Logo">
-				</a>
+				<a href="https://www.linkedin.com/in/jellisg16/"> <img
+						src="https://cdn.worldvectorlogo.com/logos/linkedin-icon-2.svg" alt="LinkedIn Logo"> </a>
 			</div>
 		</div>
 
-
-		<!-- TODO: 
-			Spacing of the "About Me" Title
-			Text styling
-			Image shadow  
-		-->
-		<div class="about-me major-content" id="about">
-			<h1>About Me</h1>
+		<!-- About Me -->
+		<div class="about-me major-content" id="about" data-aos="fade-up" data-aos-duration="1150"
+			data-aos-once="true">
+			<h1 id="title">About Me</h1>
 			<div class="about-me-desc">
 				<div class="text-block">
-					<h2>
+					<p id="long-text">
 						Hi, I'm Julian.
-					</h2>
-					<p>
-						Currently I am a Computer Science student attending Brock University in Ontario, Canada. I am
+					</p>
+					<p id="long-text">
+						Currently I am a <span id="highlight">Computer Science student</span> attending <span
+							id="highlight">Brock University</span> in Ontario, Canada. I am
 						interested in designing and programming software applications that offer a wide range of uses.
 					</p>
-					<p>
-						To date, I have utilized programming languages such as Java, Python, and C++ to devleop a
-						variety of applications, including mobile applications, software apps, as well as computer
-						graphics. As a developer, I am constantly striving to expand my skillset by learning new
+					<p id="long-text">
+						To date, I have utilized programming languages such as <span id="highlight">Java, Python, and
+							C++</span> to devleop a
+						variety of applications, including <span id="highlight">mobile applications</span>, <span
+							id="highlight">software apps</span>, as well as <span id="highlight">computer
+							graphics</span>
+						. As a developer, I am constantly striving to expand my skillset by learning new
 						programming languages, staying up to date with the latest software tools, and taking on
 						challenging projects that push the boundaries of my abilities.
 					</p>
-					<p>
+					<p id="long-text">
 						You can expect me to work diligently and publish my future projects on my <a
-							href="https://github.com/Julellisg">GitHub page</a>.
+							href="https://github.com/Julellisg"><span id="important">GitHub page</span></a>.
 					</p>
-					<p>
+					<p id="long-text">
 						In my leisure time, I engage in productive hobbies such as graphics design and video editing, as
 						well
 						as recreational hobbies including snowboarding, tennis, art, and video games.
 					</p>
 				</div>
 				<div class="image-block">
-					<img src="Selfie of Julian v2.jpg" alt="Picture of me" class="about-me-item">
+					<img src="/src/Selfie of Julian v2.jpg" alt="Picture of me" class="about-me-item">
 				</div>
 
 			</div>
 		</div>
 
-		<!-- 
-			TODO:
-			Text style
-			hover effects
-			transparent background
-		 -->
-		<div class="project major-content" id="project">
-			<h1>My Projects</h1>
+		<!-- Projects -->
+		<div class="project major-content" id="project" data-aos="fade-up" data-aos-duration="1150"
+			data-aos-once="true">
+			<h1 id="title">My Projects</h1>
 			<div class="project-container">
 				<div id="repos-list"></div>
 			</div>
 		</div>
 
-		<!-- 
-			TODO:
-		 -->
-		<div class="contact major-content" id="contact">
-			<h1>Contact Me</h1>
+		<!-- Contact Me -->
+		<div class="contact major-content" id="contact" data-aos="fade-up" data-aos-duration="1150"
+			data-aos-once="true">
+			<h1 id="title">Contact Me</h1>
 			<div class="contact-info">
-				<p>
+				<p id="long-text">
 					If you have any interest in contacting me, please feel free to do so by sending an email to
 					<a href="mailto:julianellisg@gmail.com">julianellisg@gmail.com.</a>
 				</p>
-				<p>
+				<p id="long-text">
 					I assure you that I will promptly respond to your message as soon as
 					possible.
 				</p>
 			</div>
 		</div>
 
+		<!-- Loading scripts -->
 		<script src="github_cards.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init({
+				duration: 3000,
+				once: true,
+			});
+		</script>
+	</div>
+
+	<div class="footer">
+		<p>Julian Ellis Geronimo &copy 2023</p>
 	</div>
 
 </body>

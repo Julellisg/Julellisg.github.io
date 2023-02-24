@@ -1,15 +1,35 @@
+html{scroll-behavior:smooth}
+
 @font-face {
   font-family: 'Lexend';
-  src: url('Lexend-Regular.ttf');
+  src: url('/src/Lexend-Regular.ttf');
 }
 
 body {
   font-family: 'Lexend', sans-serif;
-  background-color: rgb(31, 14, 14);
   color: aliceblue;
-  /* background-image: url('RB\ Topography\ white.png'); */
+  background-image: url('/src/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  animation: colorCycle 5s infinite;
   justify-content: center;
   margin: 0 auto;
+}
+
+@keyframes colorCycle {
+  0% {
+    background-color: rgb(10, 10, 10);
+  }
+
+  50% {
+    background-color: rgb(70, 0, 0);
+  }
+
+  100% {
+    background-color: rgb(10, 10, 10);
+  }
 }
 
 h1, h2 {
@@ -23,25 +43,32 @@ h1, h2 {
   float: right;
   overflow: hidden;
 
-  margin: 4px;
-  backdrop-filter: blur(5px);
+  padding: 10px 4px 10px 4px;
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(12px);
   border-radius: 20px;
 
   z-index: 100;
 }
 
 .topnav a {
-  font-size: 24px;
-  padding: 0 10px 0 10px;
+  font-size: 20px;
+  padding: 0 16px 0 16px;
   text-decoration: none;
   font-weight: 400;
   border-radius: 20px;
-
+  color: white;
   transition: background-color 0.5s ease;
 }
 
 .topnav a:hover {
-  background-color: rgb(76, 0, 255);
+  color:rgb(255, 125, 125);
+  transition: color 0.3s ease;
+}
+
+.topnav a:not(:hover) {
+  color:white;
+  transition: color 0.3s ease;
 }
 
 .main {
@@ -57,13 +84,17 @@ h1, h2 {
   justify-content: center;
 }
 
+.major-content a {
+  color:rgb(255, 60, 60)
+}
+
 /* Major content 1 */
 #self-title {
-  font-size: 60px;
+  font-size: 50px;
 }
 
 #self-sub-title {
-  font-size: 35px;
+  font-size: 40px;
 }
 
 #self-links {
@@ -80,12 +111,16 @@ a img {
   display: flex;
 }
 
+.about-me-item {
+  border-radius: 14px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8)
+}
+
 .text-block {
   flex-basis: 60%;
   position: relative;
   margin: auto;
   padding: 0 20px 0 20px;
-  /* border-right: 2px solid rgb(255, 255, 255); */
 }
 
 .text-block p {
@@ -123,16 +158,38 @@ a img {
   margin: 10px;
   padding: 10px;
   border-radius: 6px;
-  border: 2px solid rgb(255, 255, 255);
+  background-color: rgb(55, 25, 25);
+}
+
+#repos-list a:hover {
+  background-color: rgb(90, 45, 45);
+  color: rgb(255, 125, 125);
+  transition: color 0.4s ease;
+}
+
+#repos-list a:not(:hover) {
+  background-color: rgb(55, 25, 25);
+  transition: background-color 0.4s ease;
 }
 
 .repo-container {
   position: relative;
   width: 25%;
-  margin: 16px;
-  padding: 20px 20px 60px 20px;
-  border-radius: 10px;
-  border: 2px solid rgb(255, 255, 255);
+  margin: 8px 16px 8px 16px;
+  padding: 20px 20px 75px 20px;
+  
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 49, 49, 0.4);
+  border-radius: 20px;
+}
+
+.repo-container:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: background-color 0.4s ease;
+}
+
+.repo-container:not(:hover) {
+  transition: 0.4s ease;
 }
 
 .btn {
@@ -152,4 +209,39 @@ a img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.footer img {
+  max-width: 24px;
+}
+
+/* Style */
+#title {
+  font-size: 40px;
+  margin-bottom: 30px;
+  border-bottom: 4px solid rgb(255, 49, 49);
+}
+
+#long-text {
+  color: rgb(200, 200, 200);
+}
+
+#highlight {
+  color:rgb(255, 125, 125);
+}
+
+#important {
+  color:rgb(255, 60, 60)
+}
+
+/* Animation */
+#home, #about, #project, #contact {
+  scroll-behavior: smooth;
 }

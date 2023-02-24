@@ -12,8 +12,7 @@ body {
   margin: 0 auto;
 }
 
-h1,
-h2 {
+h1, h2 {
   margin: 0;
 }
 
@@ -143,3 +142,14 @@ a img {
 }
 
 /* Major content 4 */
+.contact p {
+  font-size: 18px;
+  margin: 4px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

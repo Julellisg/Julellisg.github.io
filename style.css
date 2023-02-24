@@ -36,26 +36,26 @@ h1, h2 {
   margin: 0;
 }
 
+.main {
+  max-width: 85%;
+  margin: auto;
+}
+
 .topnav {
   position: fixed;
-  top: 0;
-  right: 0;
-  float: right;
   overflow: hidden;
-
-  padding: 10px 4px 10px 4px;
-  background-color: rgba(0, 0, 0, 0.3);
+  padding: 12px 0 12px 0;
+  background-color: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(12px);
-  border-radius: 20px;
-
+  /* border-radius: 20px; */
+  width: 100%;
   z-index: 100;
 }
 
 .topnav a {
   font-size: 20px;
-  padding: 0 16px 0 16px;
+  padding-right: 20px;
   text-decoration: none;
-  font-weight: 400;
   border-radius: 20px;
   color: white;
   transition: background-color 0.5s ease;
@@ -71,11 +71,6 @@ h1, h2 {
   transition: color 0.3s ease;
 }
 
-.main {
-  max-width: 85%;
-  margin: auto;
-}
-
 .major-content {
   min-height: 100vh;
   display: flex;
@@ -89,6 +84,10 @@ h1, h2 {
 }
 
 /* Major content 1 */
+.self-card {
+  text-align: center;
+}
+
 #self-title {
   font-size: 50px;
 }
@@ -120,7 +119,6 @@ a img {
   flex-basis: 60%;
   position: relative;
   margin: auto;
-  padding: 0 20px 0 20px;
 }
 
 .text-block p {
@@ -192,7 +190,7 @@ a img {
   transition: 0.4s ease;
 }
 
-.btn {
+.repo-container .btn {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -209,6 +207,28 @@ a img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+
+.contact .btn {
+  font-size: 18px;
+  text-decoration: none;
+  margin: 16px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: rgb(55, 25, 25);
+}
+
+.contact .btn:hover {
+  background-color: rgb(90, 45, 45);
+  color: rgb(255, 125, 125);
+  transition: background-color 0.4s ease;
+  transition: color 0.4s ease;
+}
+
+.contact .btn:not(:hover) {
+  background-color: rgb(55, 25, 25);
+  transition: background-color 0.4s ease;
 }
 
 /* Footer */
@@ -244,4 +264,74 @@ a img {
 /* Animation */
 #home, #about, #project, #contact {
   scroll-behavior: smooth;
+}
+
+@media (max-width: 800px) {
+  #self-title {
+    font-size: 35px;
+  }
+  #self-sub-title {
+    font-size: 30px;
+  }
+  #title {
+    font-size: 30px;
+  }
+  .repo-container h2 {
+    font-size: 14px;
+  }
+  #repos-list p {
+    font-size: 13px;
+  }
+  .repo-container a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 1000px) {
+  /* Nav bar */
+  .topnav .main {
+    text-align: center;
+  }
+
+  .topnav .main a {
+    display: inline-block;
+  }
+
+  /* About Me */
+  .about-me-desc {
+    display: flex;
+    flex-direction: column;
+  }
+  .about-me-desc p {
+    font-size: 15px;
+  }
+  .about-me .text-block {
+    order: 2;
+  }
+  .about-me {
+    order: 3;
+  }
+
+  /* Repo list */
+  .repo-container {
+    width: 50%;
+    padding-bottom: 50px;
+  }
+  .repo-container h2 {
+    font-size: 18px;
+  }
+  #repos-list p {
+    font-size: 16px;
+  }
+
+  /* Contact Me */
+  .contact p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .repo-container h2 {
+    font-size: 26px;
+  }
 }

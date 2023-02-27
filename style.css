@@ -15,14 +15,14 @@ body {
   background-size: cover;
   background-attachment: fixed;
 
-  animation: colorCycle 5s infinite;
+  animation: colorCycle 8s infinite;
   justify-content: center;
   margin: 0 auto;
 }
 
 @keyframes colorCycle {
   0% {
-    background-color: rgb(10, 10, 10);
+    background-color: rgb(35, 35, 35);
   }
 
   50% {
@@ -30,7 +30,7 @@ body {
   }
 
   100% {
-    background-color: rgb(10, 10, 10);
+    background-color: rgb(35, 35, 35);
   }
 }
 
